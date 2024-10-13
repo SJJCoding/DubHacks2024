@@ -24,28 +24,37 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
+    backKeyword: false
     gridCC: false
-    recipeSelector: false
+    nextKeyword: false
+    recipeController: false
     searchKeyword: false
+    stepText: false
     timeManager: false
     timerKeyword: false
     webRequest: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - recipeSelector: !<MappingBased.RecipeSelector> 00000000-0000-0000-0000-000000000000
-      webRequest: !<MappingBased.WebRequest> 00000000-0000-0000-0000-000000000000
+    - webRequest: !<MappingBased.WebRequest> 00000000-0000-0000-0000-000000000000
       searchKeyword: ""
       timerKeyword: ""
       timeManager: !<MappingBased.TimeManager> 00000000-0000-0000-0000-000000000000
       gridCC: !<MappingBased.GridContentCreator> 00000000-0000-0000-0000-000000000000
+      nextKeyword: ""
+      backKeyword: ""
+      stepText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      recipeController: !<MappingBased.RecipeController> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input string searchKeyword
     - // @input string timerKeyword
-    - // @input RecipeSelector recipeSelector
+    - // @input string nextKeyword
+    - // @input string backKeyword
     - // @input WebRequest webRequest
     - // @input TimeManager timeManager
     - // @input GridContentCreator gridCC
+    - // @input Component.Text stepText
+    - // @input RecipeController recipeController

@@ -58,9 +58,13 @@ export class SpeechToText extends BaseScriptComponent {
       let data: any = {};
 
       this.webRequest.fetchRecipe(searchTerm, (s: string) => {
+        print("String" + s);
         data = JSON.parse(s);
-        this.gridCC.updateIngs(data.ingredients.keys);
-        this.recipeController.updateInstructions(data.instructions);
+        print("Data" + data);
+
+        print("Keys" + Object.keys(data));
+        this.gridCC.updateIngs(data.ingredients);
+        this.recipeController.updateInstructions(data.steps);
       });
     }
   }

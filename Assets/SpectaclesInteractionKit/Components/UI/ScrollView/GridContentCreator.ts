@@ -84,7 +84,7 @@ export class GridContentCreator extends BaseScriptComponent {
 
     for (const element of this.items) {
       if (i >= newText.length) {
-        element.destroy();
+        element.enabled = false; //destroy();
         continue;
       }
       element.getChild(0).getComponent("Text").text = newText[i];
